@@ -1,0 +1,144 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #fff;
+    --accent: #2563eb;
+    --muted: #6b7280
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial;
+    background: var(--bg);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px
+}
+
+.wrap {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06)
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #0f172a
+}
+
+.sub {
+    margin: 6px 0 12px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.new-task {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6e9ef;
+    font-size: 15px
+}
+
+.btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.btn.small {
+    padding: 6px 8px;
+    font-size: 13px;
+    border-radius: 6px
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #eef2ff
+}
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #f3f4f6
+}
+
+.task.completed {
+    opacity: 0.6;
+    text-decoration: line-through
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    border: 1px solid #e6e9ef;
+    display: inline-block
+}
+
+.text {
+    flex: 1
+}
+
+.actions {
+    display: flex;
+    gap: 8px
+}
+
+.icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--muted)
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+@media (max-width:420px) {
+    .wrap {
+        padding: 14px
+    }
+
+    .btn {
+        padding: 8px 10px
+    }
+}
